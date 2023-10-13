@@ -9,6 +9,9 @@ import { OurUser } from '../model/our-user';
   providedIn: 'root'
 })
 export class FirestoreService {
+  loadUserCwits(uid: string) {
+    throw new Error('Method not implemented.');
+  }
 
 
   db: Firestore;
