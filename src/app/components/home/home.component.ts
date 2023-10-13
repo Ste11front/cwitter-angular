@@ -17,11 +17,22 @@ export class HomeComponent implements OnInit{
   constructor(private firestore: FirestoreService){}
 
   ngOnInit(): void {
-    this.firestore.getCwits()
-    .then(data => {
-      console.log(data)
-      this.cwits = data as Cwit[]
+    this.firestore.getCwits((data: any)=> {
+      const newCwits = data.docs.map((doc: any) => {
+          return {
+            text: doc.data()['text'],
+            url: doc.data()['url'],
+            author: doc.data()['author'],
+            authorName: doc.data()['authorName'],
+            creationTime: doc.data()['creationTime'].toDate(),
+          }
+        });
+      this.cwits = newCwits;
     })
+    // .then(data => {
+    //   console.log(data)
+    //   this.cwits = data as Cwit[]
+    // })
   }
 
 }

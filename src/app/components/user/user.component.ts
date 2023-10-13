@@ -25,7 +25,7 @@ export class UserComponent {
     this.authServ.firebaseUser.subscribe(fUser => {
       if (fUser) {
         this.fireUser = fUser;
-        this.loadUserCwits(this.fireUser.uid)
+        //this.loadUserCwits(this.fireUser.uid)
       }
     })
 
@@ -38,8 +38,8 @@ export class UserComponent {
   }
 
 
-  loadUserCwits(uid: string){
-    this.firestoreServ.loadUserCwits(uid).subscribe(cwits => this.userCwits = cwits)
-  }
+  // loadUserCwits(uid: string){
+  //   this.firestoreServ.loadUserCwits(uid).then(cwits => this.userCwits = cwits)
+  // }
 
 }
