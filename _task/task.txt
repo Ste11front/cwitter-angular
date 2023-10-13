@@ -1,0 +1,21 @@
+1 header con ricerca (implementazione ricerca facoltativa) e navigation
+2 home con tutti i cwit di tutti gli utenti (facoltativo limitare il numero ai 20 cwit più recenti)
+3 footer come si vuole
+4 pagina user con info utente e solo i post dell'utente
+5 pagina o dialog di inserimento nuovo cwit acessibile solo da pagina user
+6 auth guard che protegge la pagina user
+
+Authentication  Email/password 	Google Anonimo
+Firebase database modalità di test
+
+author "389ryew8"
+(stringa)
+creationTime 11 ottobre 2023 alle ore 12:00:00 UTC+2
+(timestamp)
+text "primo cwitt"
+(stringa)
+url "https://www.sticker.com/picture_library/product_images/award-ribbons/72430_1st-first-place-award-ribbon-stickers-and-labels.png"
+
+https://firebase.google.com/docs/firestore/query-data/get-data?athuser=0#web-modular-api
+
+firebase-config.ts modificare per importare propri dati firebase
