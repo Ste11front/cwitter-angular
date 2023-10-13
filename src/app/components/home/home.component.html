@@ -1,4 +1,7 @@
 
 <ul>
-  <li *ngFor="let cwit of cwits">{{cwit.text}}</li>
+  <li *ngFor="let cwit of cwits">
+    <img src="{{cwit.url}}" alt="">
+    <h2>{{cwit.text}}</h2>
+  </li>
 <ul>

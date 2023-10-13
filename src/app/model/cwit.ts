@@ -4,4 +4,5 @@ export interface Cwit {
   author: string;
   creationTime: Date;
   authorName: string;
+  tags: string[]
 }

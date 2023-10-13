@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit{
             url: doc.data()['url'],
             author: doc.data()['author'],
             authorName: doc.data()['authorName'],
-            creationTime: doc.data()['creationTime'].toDate(),
+            creationTime: doc.data()['creationTime']?.toDate(),
           }
         });
       this.cwits = newCwits;
@@ -33,6 +33,23 @@ export class HomeComponent implements OnInit{
     //   console.log(data)
     //   this.cwits = data as Cwit[]
     // })
+
+    // const text = 'ciao a tutti gli amici del club di #deltaplano di #genova'
+    // const url = 'http://deltaplano-genova.org'
+
+    // const newCwit = {
+    //   text: text,
+    //   url: url,
+    //   author: firebaseUser.uid,
+    //   authorName: ourUser.username,
+    //   creationTime: new Date(),
+    //   tags: parseForTags(text)
+    // }
   }
 
+  // parseForTags(text:string){
+  //   const splitted = text.split(' ');
+  //   const tags = splitted.filter(string => string[0] === '#')
+  //   return tags;
+  // }
 }
